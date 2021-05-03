@@ -32,6 +32,11 @@ class FicheMedicale
      */
     private $prescription;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=DossierMedical::class, inversedBy="Fiches")
+     */
+    private $dossierMedical;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class FicheMedicale
     public function setPrescription(string $prescription): self
     {
         $this->prescription = $prescription;
+
+        return $this;
+    }
+
+    public function getDossierMedical(): ?DossierMedical
+    {
+        return $this->dossierMedical;
+    }
+
+    public function setDossierMedical(?DossierMedical $dossierMedical): self
+    {
+        $this->dossierMedical = $dossierMedical;
 
         return $this;
     }
