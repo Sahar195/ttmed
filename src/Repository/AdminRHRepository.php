@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\AdmininRH;
+use App\Entity\AdminRH;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method AdmininRH|null find($id, $lockMode = null, $lockVersion = null)
- * @method AdmininRH|null findOneBy(array $criteria, array $orderBy = null)
- * @method AdmininRH[]    findAll()
- * @method AdmininRH[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method AdminRH|null find($id, $lockMode = null, $lockVersion = null)
+ * @method AdminRH|null findOneBy(array $criteria, array $orderBy = null)
+ * @method AdminRH[]    findAll()
+ * @method AdminRH[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class AdmininRHRepository extends ServiceEntityRepository
+class AdminRHRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, AdmininRH::class);
+        parent::__construct($registry, AdminRH::class);
     }
 
     // /**
-    //  * @return AdmininRH[] Returns an array of AdmininRH objects
+    //  * @return AdminRH[] Returns an array of AdminRH objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class AdmininRHRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?AdmininRH
+    public function findOneBySomeField($value): ?AdminRH
     {
         return $this->createQueryBuilder('a')
             ->andWhere('a.exampleField = :val')
